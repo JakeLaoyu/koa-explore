@@ -18,8 +18,8 @@ exports.login = async (ctx) => {
     return
   }
 
-  const token = jwt.sign({ name }, Config.jwtSecret, {
-    expiresIn: '60s',
+  const token = jwt.sign({ name }, Config.jwt.secret, {
+    expiresIn: Config.jwt.expiresIn,
   })
 
   ctx.body = {
@@ -50,7 +50,7 @@ exports.signin = async (ctx) => {
     password: pwd,
   })
 
-  const token = jwt.sign({ name: newuser.name }, Config.jwtSecret, {
+  const token = jwt.sign({ name: newuser.name }, Config.jwt.secret, {
     expiresIn: '60s',
   })
 

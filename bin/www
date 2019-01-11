@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-const debug = require('debug')('demo:server')
+const debug = require('debug')('app')
 const http = require('http')
 const app = require('../app')
 
@@ -86,5 +86,6 @@ function onListening() {
   const bind = typeof addr === 'string'
     ? `pipe ${addr}`
     : `port ${addr.port}`
+  console.log(`Listening on ${bind}`)
   debug(`Listening on ${bind}`)
 }

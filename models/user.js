@@ -9,12 +9,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
   },
   password: String,
-  // 用户权限
-  // 0 普通用户;
-  // 1 邮件激活后的用户s
-  // >10 管理员
-  // >50 超级管理员
-  role: {
+  role: { // 用户权限: 0 普通用户; 1 邮件激活后的用户; 10 管理员; 50 超级管理员
     type: Number,
     default: 0,
   },

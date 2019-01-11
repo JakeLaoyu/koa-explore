@@ -3,11 +3,11 @@ const User = require('../controllers/user')
 
 router.prefix('/user')
 
-router.get('/', (ctx) => {
+router.get('/', (ctx, next) => {
   ctx.body = 'this is a users response!'
 })
 
-router.get('/bar', (ctx) => {
+router.get('/bar', (ctx, next) => {
   ctx.body = 'this is a users/bar response'
 })
 

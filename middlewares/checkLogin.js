@@ -3,7 +3,6 @@ const Config = require('../lib/config')
 
 module.exports = async (ctx, next) => {
   const authorization = ctx.get('Authorization')
-  console.log('authorization', authorization)
   if (!authorization) {
     ctx.body = {
       code: 401,

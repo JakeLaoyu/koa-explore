@@ -38,7 +38,7 @@
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
     "less-middleware": "1.0.x",
-    "mongoose": "^5.4.3"
+    "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
